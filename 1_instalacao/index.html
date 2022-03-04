@@ -12,7 +12,15 @@
 
     <div id="mensagem">
 
+        <form action="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite seu nome:">
+            <input type="submit" value="Enviar" v-on:click="submitForm">
+        </form>
+
         <p>O meu nome é: {{ nome }}, e tenho {{ idade }} anos</p>
+
+        <!-- /* Exemplo com o data que fez com que ao mesmo tempo, o usuário escreve no input e aparece no computador */ -->
+        <p>Data bindling: {{ input_name }}</p>
 
     </div>
     
